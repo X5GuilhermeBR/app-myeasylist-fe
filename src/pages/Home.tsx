@@ -6,6 +6,7 @@ import {
 } from '@ant-design/icons'
 import type { MenuProps } from 'antd'
 import { Layout, Menu, theme } from 'antd'
+import './HomeStyles.css'
 
 const { Header, Content, Footer, Sider } = Layout
 
@@ -32,7 +33,7 @@ const items: MenuItem[] = [
 ]
 
 const Home: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(false)
+  const [collapsed, setCollapsed] = useState(true)
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken()
@@ -54,7 +55,19 @@ const Home: React.FC = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            Conteúdo
+            <>
+              <div className="root" >
+                <>
+                  <img src="https://i.gifer.com/ZZ5E.gif" className="logo react" />
+                </>
+              </div>
+              <h1>My Easy List</h1>
+              <div>
+                <p>
+                  Em breve versão DEMO...
+                </p>
+              </div>
+            </>
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
